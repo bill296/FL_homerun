@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florida CRE NPL Investing — Step-by-Step Guide</title>
+<style>
+  :root {
+    --navy: #1a2744;
+    --blue: #2563eb;
+    --light-blue: #dbeafe;
+    --green: #16a34a;
+    --light-green: #dcfce7;
+    --amber: #d97706;
+    --light-amber: #fef3c7;
+    --red: #dc2626;
+    --light-red: #fee2e2;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-900: #111827;
+    --text: #1f2937;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--gray-50);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* Header */
+  .page-header {
+    background: var(--navy);
+    color: white;
+    padding: 32px 40px;
+  }
+  .page-header h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+  .page-header p { font-size: 14px; color: #94a3b8; }
+  .tag {
+    display: inline-block;
+    background: #2563eb22;
+    color: #93c5fd;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-top: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* Layout */
+  .layout { display: flex; min-height: calc(100vh - 100px); }
+
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    min-width: 240px;
+    background: white;
+    border-right: 1px solid var(--gray-200);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 16px 0;
+  }
+  .sidebar-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gray-600);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 16px 4px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--gray-700);
+    border-left: 3px solid transparent;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .nav-item:hover { background: var(--gray-50); color: var(--blue); }
+  .nav-item.active {
+    background: var(--light-blue);
+    color: var(--blue);
+    border-left-color: var(--blue);
+    font-weight: 600;
+  }
+  .nav-num {
+    width: 20px; height: 20px;
+    background: var(--gray-200);
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    color: var(--gray-600);
+  }
+  .nav-item.active .nav-num { background: var(--blue); color: white; }
+
+  /* Main content */
+  .main { flex: 1; padding: 32px 40px; max-width: 860px; }
+
+  /* Sections */
+  .section { display: none; }
+  .section.visible { display: block; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--gray-200);
+  }
+  .step-badge {
+    width: 44px; height: 44px;
+    background: var(--navy);
+    color: white;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-header h2 { font-size: 22px; color: var(--navy); font-weight: 700; }
+  .section-header .sub { font-size: 13px; color: var(--gray-600); margin-top: 2px; }
+
+  /* Cards */
+  .card {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card p, .card li { font-size: 14px; color: var(--gray-700); line-height: 1.7; }
+  .card ul, .card ol { padding-left: 20px; }
+  .card li { margin-bottom: 6px; }
+
+  /* Alert boxes */
+  .alert {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+  .alert strong { font-weight: 700; }
+  .alert-green { background: var(--light-green); border-left: 4px solid var(--green); color: #14532d; }
+  .alert-amber { background: var(--light-amber); border-left: 4px solid var(--amber); color: #78350f; }
+  .alert-red { background: var(--light-red); border-left: 4px solid var(--red); color: #7f1d1d; }
+  .alert-blue { background: var(--light-blue); border-left: 4px solid var(--blue); color: #1e3a8a; }
+
+  /* Checklist */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 14px;
+    color: var(--gray-700);
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .check-box {
+    width: 18px; height: 18px;
+    border: 2px solid var(--gray-200);
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    cursor: pointer;
+    background: white;
+    transition: all 0.15s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .check-box.checked { background: var(--green); border-color: var(--green); }
+  .check-box.checked::after { content: '✓'; color: white; font-size: 11px; font-weight: 700; }
+  .checklist li.done > span { text-decoration: line-through; color: #9ca3af; }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0; }
+  th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-weight: 600; }
+  td { padding: 9px 14px; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--gray-50); }
+
+  /* Numbers */
+  .num-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+  .num-box {
+    background: var(--navy);
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .num-box .big { font-size: 24px; font-weight: 800; color: #60a5fa; }
+  .num-box .label { font-size: 11px; color: #94a3b8; margin-top: 4px; }
+
+  /* Nav buttons */
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-200);
+  }
+  .btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-primary { background: var(--blue); color: white; }
+  .btn-primary:hover { background: #1d4ed8; }
+  .btn-secondary { background: var(--gray-100); color: var(--gray-700); border: 1px solid var(--gray-200); }
+  .btn-secondary:hover { background: var(--gray-200); }
+  .btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+  /* Progress */
+  .progress-bar { height: 4px; background: var(--gray-200); border-radius: 2px; margin-bottom: 8px; }
+  .progress-fill { height: 100%; background: var(--blue); border-radius: 2px; transition: width 0.3s; }
+  .progress-label { font-size: 11px; color: var(--gray-600); text-align: right; }
+
+  /* Two col */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .highlight { background: #fef9c3; padding: 2px 5px; border-radius: 3px; font-weight: 600; }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 6px; bottom: 6px; width: 2px; background: var(--gray-200); }
+  .tl-item { position: relative; margin-bottom: 18px; }
+  .tl-dot { position: absolute; left: -24px; top: 4px; width: 12px; height: 12px; background: var(--blue); border-radius: 50%; border: 2px solid white; box-shadow: 0 0 0 2px var(--blue); }
+  .tl-item h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .tl-item p { font-size: 13px; color: var(--gray-600); }
+  .tl-time { font-size: 11px; color: var(--blue); font-weight: 700; text-transform: uppercase; margin-bottom: 2px; }
+
+  @media (max-width: 700px) {
+    .sidebar { display: none; }
+    .main { padding: 16px; }
+    .num-grid { grid-template-columns: 1fr 1fr; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Florida CRE NPL Investing — Field Guide</h1>
+  <p>A step-by-step playbook for individual investors entering the Florida commercial note market</p>
+  <span class="tag">FL Stat 687.12</span>
+  <span class="tag">25% Default Rate</span>
+  <span class="tag">Stall &amp; Accrue Strategy</span>
+  <span class="tag">65% Max LTV</span>
+</div>
+
+<div class="layout">
+
+  <div class="sidebar">
+    <div class="sidebar-title">Steps</div>
+    <div class="nav-item active" onclick="showSection(0)">
+      <div class="nav-num">1</div> Understand the Strategy
+    </div>
+    <div class="nav-item" onclick="showSection(1)">
+      <div class="nav-num">2</div> Set Up Your Capital
+    </div>
+    <div class="nav-item" onclick="showSection(2)">
+      <div class="nav-num">3</div> Build Your Legal Structure
+    </div>
+    <div class="nav-item" onclick="showSection(3)">
+      <div class="nav-num">4</div> Assemble Your Team
+    </div>
+    <div class="nav-item" onclick="showSection(4)">
+      <div class="nav-num">5</div> Source Notes
+    </div>
+    <div class="nav-item" onclick="showSection(5)">
+      <div class="nav-num">6</div> Underwrite a Note
+    </div>
+    <div class="nav-item" onclick="showSection(6)">
+      <div class="nav-num">7</div> Buy the Note (PSA)
+    </div>
+    <div class="nav-item" onclick="showSection(7)">
+      <div class="nav-num">8</div> Post-Acquisition
+    </div>
+    <div class="nav-item" onclick="showSection(8)">
+      <div class="nav-num">9</div> Workout &amp; Guarantee Release
+    </div>
+    <div class="nav-item" onclick="showSection(9)">
+      <div class="nav-num">10</div> Foreclosure in Florida
+    </div>
+    <div class="nav-item" onclick="showSection(10)">
+      <div class="nav-num">11</div> Exit &amp; Returns
+    </div>
+    <div class="nav-item" onclick="showSection(11)">
+      <div class="nav-num">12</div> First Deal Checklist
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="progress-bar"><div class="progress-fill" id="progress" style="width:8%"></div></div>
+    <div class="progress-label" id="progress-label">Step 1 of 12</div>
+
+    <!-- STEP 1: UNDERSTAND THE STRATEGY -->
+    <div class="section visible" id="section-0">
+      <div class="section-header">
+        <div class="step-badge">1</div>
+        <div>
+          <h2>Understand the Strategy</h2>
+          <div class="sub">The Florida "Stall &amp; Accrue" method — why it works and what makes it unique</div>
+        </div>
+      </div>
+
+      <div class="alert alert-blue">
+        <strong>The Core Idea:</strong> You buy a defaulted commercial real estate loan from a bank. Florida law lets that loan accrue interest at 25% per year while you wait. Banks price NPLs at UPB plus the contract rate accrued to closing — you immediately benefit from the spread between what you paid and what the borrower owes at the 25% default rate. You control when foreclosure starts, so you wait until the accrued debt approaches the property value before pulling the trigger. You exit with either a paid-off loan or the property itself.
+      </div>
+
+      <div class="card">
+        <h3>🏛️ The Legal Underpinning</h3>
+        <p><strong>FL Stat 687.12</strong> — Florida's commercial loan usury exemption. For loans where (a) the borrower is a legal entity (LLC, corp, LP, etc.) and (b) the principal is over $500,000, there is <em>no interest rate cap</em>. A 25% default interest rate is fully enforceable. Banks know this and write it into their commercial loan documents.</p>
+        <br>
+        <p>Florida also has no statutory right of reinstatement in judicial foreclosure and no post-sale redemption period. This means once you decide to foreclose, the borrower cannot pay you a month of arrears and reinstate the loan — they must pay the full accelerated balance.</p>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>✅ What You Need in the Loan</h3>
+          <ul>
+            <li>Borrower is a <strong>legal entity</strong> (LLC, corp, trust)</li>
+            <li>Original principal <strong>over $500,000</strong></li>
+            <li>Secured by Florida <strong>commercial real estate</strong></li>
+            <li>Default interest rate of <strong>25%</strong> in the note</li>
+            <li>Loan is already in <strong>default</strong> (or near it)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>🚫 What Disqualifies a Loan</h3>
+          <ul>
+            <li>Individual borrower (personal bankruptcy risk)</li>
+            <li>Residential property (different rules)</li>
+            <li>Principal under $500K (usury cap applies)</li>
+            <li>No default rate clause, or rate &lt; 18%</li>
+            <li>Existing active foreclosure (someone else controls timing)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📈 How the Math Works</h3>
+        <p>Example: $1M UPB note, 6.5% contract rate, <strong>6 months in default</strong> when the bank sells. Bank prices at UPB + contract rate accrual: $1,032,500. The borrower already owes $1,125,000 at the 25% default rate — your immediate spread is $92,500 on Day 1. Every month thereafter accrues another ~$20,800.</p>
+        <br>
+        <table>
+          <tr><th>Month Post-Close</th><th>Total Months in Default</th><th>Borrower Owes (25%)</th><th>Your Cost</th><th>Gross Spread</th></tr>
+          <tr><td>Close (Day 1)</td><td>6</td><td>$1,125,000</td><td>$1,032,500</td><td>$92,500</td></tr>
+          <tr><td>Month 6</td><td>12</td><td>$1,250,000</td><td>$1,032,500</td><td>$217,500</td></tr>
+          <tr><td>Month 12</td><td>18</td><td>$1,375,000</td><td>$1,032,500</td><td>$342,500</td></tr>
+          <tr><td>Month 18</td><td>24</td><td>$1,500,000</td><td>$1,032,500</td><td>$467,500</td></tr>
+        </table>
+        <br>
+        <p>The stalling period runs <em>before you file for foreclosure</em>. Once filed, the FL judicial process typically takes 8–14 months. You initiate only when your accrued debt approaches the property's value.</p>
+      </div>
+
+      <div class="alert alert-amber">
+        <strong>The Risk You Must Accept:</strong> The property value must support the accrued debt by the time you foreclose. If the property declines significantly, you may end up owning real estate at a price that's too high. Underwriting the collateral value — conservatively — is the central discipline of this strategy.
+      </div>
+
+      <div class="card">
+        <h3>💰 How Banks Price Notes — and Why You Benefit</h3>
+        <p>Banks typically price NPLs at the <strong>UPB plus the contract (note) rate</strong> accrued to the closing date — not at the 25% default rate. You keep the spread from the default date to closing, and 100% of the 25% accrual after closing.</p>
+        <br>
+        <table>
+          <tr><th>Item</th><th>Example</th></tr>
+          <tr><td>UPB (face balance)</td><td>$1,000,000</td></tr>
+          <tr><td>Contract rate accrual (6.5% × 6 months)</td><td>+$32,500</td></tr>
+          <tr><td><strong>Bank's asking price</strong></td><td><strong>$1,032,500</strong></td></tr>
+          <tr><td>Your accrued balance at 25% (6 months)</td><td>$1,125,000</td></tr>
+          <tr><td><strong>Immediate spread at closing</strong></td><td><strong>$92,500</strong></td></tr>
+        </table>
+        <br>
+        <p>That $92,500 is the gap between what you paid and what the borrower already owes you — on Day 1. Every subsequent month accrues an additional ~$20,800 (25% ÷ 12 × $1.125M) on top of that. The spread widens automatically every day you hold.</p>
+      </div>
+
+      <div class="card">
+        <h3>🔄 The Two Exits</h3>
+        <ol>
+          <li><strong>Borrower pays off</strong> — At any point, the borrower can pay the full accelerated balance (principal + 25% default interest + fees). This is often your best outcome: you collect the full accrued balance in cash.</li>
+          <li><strong>Foreclose and own/sell the property</strong> — You win the foreclosure sale (credit bid), take title, and then either hold or sell the real estate. Your cost basis is your purchase price, not the accrued debt.</li>
+        </ol>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" disabled>← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(1)">Next: Set Up Capital →</button>
+      </div>
+    </div>
+
+    <!-- STEP 2: CAPITAL -->
+    <div class="section" id="section-1">
+      <div class="section-header">
+        <div class="step-badge">2</div>
+        <div>
+          <h2>Set Up Your Capital</h2>
+          <div class="sub">Pledged asset lines and margin loans — structure, sizing, and margin call risk</div>
+        </div>
+      </div>
+
+      <div class="alert alert-blue">
+        <strong>Your capital structure:</strong> If you hold publicly traded equities, you can pledge them as collateral for a line of credit and use those proceeds to buy notes. This is standard at most major brokerages and is one of the most efficient ways to fund early NPL deals — you keep your equity exposure while deploying note capital at a much lower cost than a conventional loan.
+      </div>
+
+      <div class="card">
+        <h3>💳 Pledged Asset Line (PAL) / Margin Loan</h3>
+        <p>You have two main vehicles:</p>
+        <br>
+        <table>
+          <tr><th>Vehicle</th><th>Typical LTV</th><th>Rate (2026)</th><th>Best For</th></tr>
+          <tr><td><strong>Pledged Asset Line</strong> (Schwab, Fidelity, ML, etc.)</td><td>50–70% of portfolio</td><td>Prime + 0.5–1.5%</td><td>Largest draw, lowest rate, most flexible</td></tr>
+          <tr><td><strong>Margin Loan</strong></td><td>50% standard; 70% on blue chips</td><td>Prime + 1–2%</td><td>Smaller draws; simpler setup</td></tr>
+          <tr><td><strong>Securities-Backed LOC</strong> (bank)</td><td>50–70%</td><td>SOFR + 1–2%</td><td>Structured like a bank line; useful for entity draws</td></tr>
+        </table>
+        <br>
+        <p>At 50% LTV, you have <span class="highlight">$500K of borrowing capacity per $1M of equity</span> before margin calls. Start conservatively — you want dry powder for follow-on deals and margin call buffer. Never exceed 50% LTV on your borrow line.</p>
+      </div>
+
+      <div class="num-grid">
+        <div class="num-box">
+          <div class="big">50%</div>
+          <div class="label">Max LTV on equity borrow line</div>
+        </div>
+        <div class="num-box">
+          <div class="big">2–3</div>
+          <div class="label">First notes at $500K–$1.5M each</div>
+        </div>
+        <div class="num-box">
+          <div class="big">~8%</div>
+          <div class="label">Estimated borrow cost (2026)</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>⚠️ Margin Call Risk — Critical</h3>
+        <p>If your equity portfolio drops, the brokerage will demand more collateral or repayment. You must plan for this:</p>
+        <br>
+        <ul>
+          <li><strong>Never borrow more than 50% LTV.</strong> A 30% equity market drop would push you to 70%+ LTV — danger zone.</li>
+          <li><strong>Keep a cash buffer</strong> — $200–500K liquid, separate from the portfolio, to cover a margin call without a forced sale.</li>
+          <li><strong>Notes are illiquid</strong> — you cannot sell them quickly in a crisis. Your pledged equities are the liquid leg of this strategy.</li>
+          <li>Consider using a <strong>Pledged Asset Line</strong> rather than margin — PALs at Schwab Private Client or Merrill Lynch do not force liquidation as quickly and give more notice.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🧮 Capital Sizing for First Deals</h3>
+        <p>For your first 1–3 notes, a disciplined sizing:</p>
+        <br>
+        <table>
+          <tr><th>Item</th><th>Sizing Guidance</th></tr>
+          <tr><td>Total borrowing capacity (50% LTV on equities)</td><td>$500K per $1M of pledged portfolio value</td></tr>
+          <tr><td>Reserve (margin call buffer — hold in cash)</td><td>Minimum 15–20% of borrow line, separate from portfolio</td></tr>
+          <tr><td>Legal &amp; carry costs (est. per deal)</td><td>$50,000–75,000 per note (budget before bidding)</td></tr>
+          <tr><td><strong>First deal purchase price</strong></td><td><strong>UPB + contract rate accrual to close — verify bank's calculation</strong></td></tr>
+          <tr><td>65% LTV ceiling check</td><td>Purchase price ÷ appraised property value must be ≤ 65%</td></tr>
+        </table>
+      </div>
+
+      <div class="alert alert-green">
+        <strong>Action:</strong> Call your brokerage's Private Client / Advisor Services desk and ask about a Pledged Asset Line. Have them walk you through the LTV schedule for your specific holdings. Get the line established <em>before</em> you find a deal — you can't close a note in 10 days if you haven't set up the borrowing facility yet.
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(0)">← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(2)">Next: Legal Structure →</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: LEGAL STRUCTURE -->
+    <div class="section" id="section-2">
+      <div class="section-header">
+        <div class="step-badge">3</div>
+        <div>
+          <h2>Build Your Legal Structure</h2>
+          <div class="sub">How to hold notes, protect yourself, and separate deals</div>
+        </div>
+      </div>
+
+      <div class="alert alert-amber">
+        <strong>Do this before your first deal.</strong> Holding notes in your personal name creates personal liability and complicates your taxes and exit. Spend a few thousand dollars now to set this up correctly.
+      </div>
+
+      <div class="card">
+        <h3>🏗️ Recommended Structure</h3>
+        <p>The standard structure for a solo NPL investor:</p>
+        <br>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Layer 1 — Management</div>
+            <h4>Your Management LLC (e.g., "McNary Capital Management LLC")</h4>
+            <p>Florida LLC, member-managed, owned 100% by you. This is the entity that signs contracts, employs your servicer, and earns management fees. It does NOT hold the notes directly.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Layer 2 — Deal Holding</div>
+            <h4>Deal-Specific LLC per Note (e.g., "McNary Note 1 LLC")</h4>
+            <p>A separate Florida LLC for each note or each cohort of notes. This is the entity that actually holds the note and mortgage. Liability from one note cannot bleed to others. Managed by your Management LLC.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Optional — Later</div>
+            <h4>Fund Structure (LP or LLC)</h4>
+            <p>Once you bring in outside capital, you'll add a GP entity and LP/member investors. Irrelevant for solo start.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>📋 What Each Deal LLC Needs</h3>
+          <ul>
+            <li>Florida Articles of Organization (simple, ~$125 state fee)</li>
+            <li>Operating Agreement (your attorney drafts once, reuse)</li>
+            <li>EIN from IRS (free, takes 5 min online)</li>
+            <li>Business bank account</li>
+            <li>Registered Agent (can use attorney's office)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>💰 Cost to Set Up</h3>
+          <ul>
+            <li>Management LLC: ~$1,500–2,500 (attorney)</li>
+            <li>First deal LLC: ~$500–1,000 (template reuse)</li>
+            <li>State fees: ~$125–138 per LLC</li>
+            <li>Annual report: $138/year per FL LLC</li>
+            <li>Bank account: free at most banks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🏦 Banking for the Holding Entity</h3>
+        <p>Open a checking account for each deal LLC at a Florida community bank (not your personal bank). Reasons:</p>
+        <ul>
+          <li>Community bank relationship may later become a sourcing relationship</li>
+          <li>Keeps deal cash flows clean and auditable</li>
+          <li>Demonstrates that your entity is a real operating entity (matters in any later dispute)</li>
+        </ul>
+      </div>
+
+      <div class="alert alert-red">
+        <strong>Lender Liability Risk:</strong> When you buy a note and then engage the borrower about restructuring, you are wearing two hats — creditor and potential workout partner. If you make promises about restructuring that you don't honor, borrowers can sue under theories of lender liability or promissory estoppel. Your attorney must draft all borrower communications carefully. Never make verbal commitments about forbearance or modification. Everything in writing, everything conditioned.
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(1)">← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(3)">Next: Assemble Your Team →</button>
+      </div>
+    </div>
+
+    <!-- STEP 4: TEAM -->
+    <div class="section" id="section-3">
+      <div class="section-header">
+        <div class="step-badge">4</div>
+        <div>
+          <h2>Assemble Your Team</h2>
+          <div class="sub">The people you need before you buy your first note</div>
+        </div>
+      </div>
+
+      <div class="alert alert-blue">
+        <strong>You are buying a legal instrument</strong> — not a property. The people who matter most are attorneys and servicers, not real estate agents.
+      </div>
+
+      <div class="card">
+        <h3>⚖️ 1. Florida Foreclosure Attorney — Priority #1</h3>
+        <p>This is your most important hire. You need a Florida attorney (or firm) that:</p>
+        <ul>
+          <li>Specializes in <strong>commercial mortgage foreclosure</strong> — not residential, not collections</li>
+          <li>Has handled <strong>note purchases and assignments</strong> (they need to review the PSA and assignment docs)</li>
+          <li>Understands FL Stat 687.12 and the entity borrower structure</li>
+          <li>Is comfortable with your stalling strategy — some attorneys will push you to foreclose sooner than necessary</li>
+        </ul>
+        <br>
+        <p><strong>How to find them:</strong> Ask workout officers at FL community banks who they call when they refer a note buyer. Ask commercial real estate attorneys for referrals. Look at recent FL commercial foreclosure filings in your target county — the plaintiff's attorney on the caption is often the right person.</p>
+        <br>
+        <p><strong>Estimated fees:</strong> $5,000–$15,000 per deal for document review and foreclosure (uncontested). Budget $25,000+ if contested or if the borrower fights.</p>
+      </div>
+
+      <div class="card">
+        <h3>🏦 2. Loan Servicer (Optional at Start)</h3>
+        <p>A <strong>loan servicer</strong> manages the administrative functions of a note: sending notices, tracking balances, collecting payments, maintaining records. For your first 1–3 notes, you can manage this yourself with a spreadsheet and your attorney's help. As you scale, you'll want a licensed servicer.</p>
+        <br>
+        <p><strong>When to hire one:</strong> Once you have 5+ notes or if any note is over $2M face value. Florida requires servicers handling consumer loans to be licensed — commercial notes have fewer requirements, but a professional servicer provides documentation credibility in litigation.</p>
+        <br>
+        <p><strong>Cost:</strong> $200–500/month per note, or a flat retainer.</p>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>🔍 3. Title Company</h3>
+          <p>You need a title company that is comfortable with <strong>note and mortgage assignments</strong>. They will:</p>
+          <ul>
+            <li>Run title on the collateral property</li>
+            <li>Review lien position of the mortgage</li>
+            <li>Issue lender's title insurance for your position</li>
+          </ul>
+          <p style="margin-top:10px"><strong>Critical:</strong> Your title policy needs to cover you as the assignee of the original lender's policy. Confirm this before closing.</p>
+        </div>
+        <div class="card">
+          <h3>📊 4. Property Appraiser / BPO</h3>
+          <p>You need a <strong>Broker Price Opinion (BPO)</strong> or full MAI appraisal of the collateral for every deal. This is the anchor of your underwriting — if you're wrong about the property value, the strategy fails.</p>
+          <ul>
+            <li>BPO: $150–500, fast (days)</li>
+            <li>MAI Appraisal: $2,500–10,000, slow (weeks)</li>
+          </ul>
+          <p style="margin-top:10px">For deals under $1M face, a BPO plus your own inspection is adequate. For larger deals, get the appraisal.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🤝 5. Bank Relationship Contacts</h3>
+        <p>Your sourcing pipeline is built on human relationships with:</p>
+        <ul>
+          <li><strong>Special Assets / Workout Officers</strong> — the bank employee responsible for managing NPLs. This is your primary contact. Not the loan officer, not the branch manager.</li>
+          <li><strong>Community bank CEOs</strong> — at smaller institutions ($100–300M assets), the CEO often personally manages the loan portfolio and makes NPL sale decisions.</li>
+          <li><strong>Bank attorneys</strong> — attorneys who handle bank workouts often know which banks have notes for sale before the notes go anywhere.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🤖 6. AI Tools — Your Force Multiplier</h3>
+        <p>At your stage, AI replaces staff for most analytical and document tasks. Use it aggressively:</p>
+        <br>
+        <table>
+          <tr><th>Task</th><th>AI Application</th></tr>
+          <tr><td><strong>Loan document extraction</strong></td><td>Upload note + mortgage PDFs → extract UPB, rate, default rate, default date, borrower entity, maturity date automatically</td></tr>
+          <tr><td><strong>Accrual modeling</strong></td><td>Build and maintain a compound interest ledger; run scenarios on filing date vs. property value</td></tr>
+          <tr><td><strong>Bid model generation</strong></td><td>Input property value, UPB, carry assumptions → outputs max bid at 65% LTV ceiling and recovery-based ceiling</td></tr>
+          <tr><td><strong>PSA redlining</strong></td><td>Upload bank's PSA → flag non-standard clauses, missing assignment language, unfavorable reps & warranties</td></tr>
+          <tr><td><strong>Borrower entity research</strong></td><td>Research borrower entity history, related parties, other litigation, UCC filings, and property ownership across FL counties</td></tr>
+          <tr><td><strong>PACER monitoring</strong></td><td>Set up alerts on borrower entity name; summarize any bankruptcy filings automatically</td></tr>
+          <tr><td><strong>Lis pendens monitoring</strong></td><td>Scrape county court dockets for new commercial foreclosure filings matching your target criteria</td></tr>
+          <tr><td><strong>Workout letters</strong></td><td>Draft all borrower correspondence — Letter of Inquiry, Forbearance Agreement, Estoppel Certificate — from your attorney's templates</td></tr>
+          <tr><td><strong>Borrower financial analysis</strong></td><td>Analyze borrower-provided financial statements for hidden assets, guarantor net worth, and deficiency collection viability</td></tr>
+          <tr><td><strong>Portfolio dashboard</strong></td><td>Track all active notes: balance, accrual rate, filing trigger date, status — updated automatically</td></tr>
+        </table>
+        <br>
+        <p>Primary tool: Claude (claude.ai) for document analysis, drafting, and modeling. Supplement with PACER for bankruptcy monitoring and county clerk search tools for lis pendens and UCC.</p>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(2)">← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(4)">Next: Source Notes →</button>
+      </div>
+    </div>
+
+    <!-- STEP 5: SOURCING -->
+    <div class="section" id="section-4">
+      <div class="section-header">
+        <div class="step-badge">5</div>
+        <div>
+          <h2>Source Notes</h2>
+          <div class="sub">How to find defaulted commercial loans for sale in Florida</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📞 Channel 1: Direct Bank Relationships (Primary)</h3>
+        <p>This is the best channel. Community banks want to sell NPLs quietly, at a negotiated price, without the friction of a formal auction. They prefer a known buyer who closes reliably.</p>
+        <br>
+        <p><strong>How to approach a bank workout officer:</strong></p>
+        <ol>
+          <li>Call the bank's main line and ask for the <em>Special Assets Department</em> or <em>Workout Department</em>. At smaller banks, ask for the Chief Credit Officer.</li>
+          <li>Introduce yourself as a commercial note investor based in Florida with capital available to purchase NPLs. Mention your FL experience.</li>
+          <li>Ask: "Are you currently managing any commercial real estate notes secured by Florida property that you'd consider selling? I'm specifically looking for entity borrowers over $500K."</li>
+          <li>Leave your contact info. Follow up quarterly even if they say no — their portfolio changes.</li>
+        </ol>
+        <br>
+        <div class="alert alert-green">
+          <strong>Your Target List:</strong> You already have a spreadsheet of 45 FL community banks ranked by CRE concentration. Start at the top — highest CRE/Equity ratio = most stress = most motivated sellers. Work down the list.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>⚖️ Channel 2: Lis Pendens Search (Proactive)</h3>
+        <p>A <strong>lis pendens</strong> is a court filing that signals a foreclosure has been filed. When a bank files to foreclose, it must record a lis pendens in the county where the property is located. This is public record.</p>
+        <br>
+        <p><strong>How to use this:</strong></p>
+        <ol>
+          <li>Go to <strong>myFloridaCounty.com</strong> or the individual county clerk's website (e.g., Clerk of the Circuit Court for Hillsborough, Miami-Dade, etc.)</li>
+          <li>Search for lis pendens filings in the commercial foreclosure docket</li>
+          <li>Identify cases where: the plaintiff is a community bank, the defendant is an entity (LLC, Corp), and the property is commercial RE</li>
+          <li>Contact the plaintiff bank's attorney — this opens a conversation about whether the bank would sell the note instead of litigating</li>
+        </ol>
+        <br>
+        <p><em>Note: When a lis pendens is already filed, you can still buy the note and substitute as plaintiff — your attorney handles the case substitution. This is routine in FL foreclosure practice.</em></p>
+      </div>
+
+      <div class="card">
+        <h3>📋 What to Ask for When a Bank Responds</h3>
+        <p>When a workout officer says they have a note to discuss, ask for a <strong>loan summary package</strong>:</p>
+        <ul>
+          <li>Copy of the original promissory note</li>
+          <li>Copy of the mortgage/deed of trust and any amendments</li>
+          <li>Current UPB (Unpaid Principal Balance) and accrued interest as of a specific date</li>
+          <li>Payment history (when did default occur?)</li>
+          <li>Most recent appraisal or BPO of the collateral</li>
+          <li>Borrower entity name and state of organization</li>
+          <li>Any existing litigation or foreclosure filings</li>
+          <li>Environmental reports if available</li>
+        </ul>
+        <br>
+        <p>Banks vary in how much they share upfront. A relationship banker will share more. Get what you can before making an offer; you'll get the rest in due diligence after a Letter of Intent is signed.</p>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(3)">← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(5)">Next: Underwrite →</button>
+      </div>
+    </div>
+
+    <!-- STEP 6: UNDERWRITING -->
+    <div class="section" id="section-5">
+      <div class="section-header">
+        <div class="step-badge">6</div>
+        <div>
+          <h2>Underwrite a Note</h2>
+          <div class="sub">The analysis you must complete before making an offer</div>
+        </div>
+      </div>
+
+      <div class="alert alert-blue">
+        <strong>Your job as underwriter:</strong> Answer one question: <em>If I own this note, stall for 18 months, and foreclose — do I make money even in the worst realistic outcome for the property?</em>
+      </div>
+
+      <div class="alert alert-red">
+        <strong>Hard Rule — 65% Maximum LTV:</strong> Never pay more than 65% of the current appraised property value for any note. This is your primary loss-prevention discipline. At 65% LTV, a 35% property decline still leaves you whole. Notes are illiquid and the stall period can be 18–24 months — you need this cushion. Do not negotiate around this ceiling.
+      </div>
+
+      <div class="card">
+        <h3>🔑 Part 1 — Legal Due Diligence (with your attorney)</h3>
+        <ul class="checklist" id="legal-dd">
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Borrower is confirmed legal entity (read the note — first page should name the borrower)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Original principal was over $500,000 (FL Stat 687.12 threshold)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Default interest rate in the note is 25% (or close to it)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Mortgage is properly recorded in the correct county</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Lien position confirmed: you're in first position (or second if priced accordingly)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Title search shows no undisclosed senior liens, tax certificates, or HOA super-liens</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Note and mortgage are in the selling bank's name (chain of assignment is clean)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Borrower entity is active (not dissolved) — check FL SOS sunbiz.org</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>No pending bankruptcy filing by borrower entity (check PACER)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Personal guarantee exists (for potential deficiency, even post-workout-conversation)</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🏢 Part 2 — Collateral Valuation (with appraiser)</h3>
+        <ul class="checklist">
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>BPO or appraisal completed by licensed FL appraiser</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>You've physically visited the property or reviewed photos/inspection report</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Property is income-producing or has clear market comps for sale value</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>You've applied a <strong>20–30% haircut</strong> to appraised value for your worst-case scenario</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Environmental: Phase I report reviewed if commercial/industrial property</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Confirm property taxes current (or model delinquent taxes into your cost)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Zoning confirmed — property use is legal nonconforming at worst</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🧮 Part 3 — The Bid Calculation</h3>
+        <p>Two constraints govern your maximum bid: (1) the 65% LTV ceiling on current property value, and (2) your projected net recovery after all costs. Take the lower of the two.</p>
+        <br>
+        <table>
+          <tr><th>Input</th><th>Example</th><th>Your Deal</th></tr>
+          <tr><td>Property value (conservative appraised)</td><td>$1,600,000</td><td></td></tr>
+          <tr><td><strong>65% LTV ceiling (hard rule)</strong></td><td><strong>$1,040,000</strong></td><td></td></tr>
+          <tr><td>Bank's asking price (UPB $1M + 6.5% × 6 mo)</td><td>$1,032,500</td><td></td></tr>
+          <tr><td>65% LTV check: $1,032,500 ÷ $1,600,000</td><td>64.5% ✓</td><td></td></tr>
+          <tr><td>Foreclosure sale discount (15%)</td><td>($240,000)</td><td></td></tr>
+          <tr><td>Net recovery at sale</td><td>$1,360,000</td><td></td></tr>
+          <tr><td>Less: foreclosure legal costs</td><td>($25,000)</td><td></td></tr>
+          <tr><td>Less: title/closing costs</td><td>($15,000)</td><td></td></tr>
+          <tr><td>Less: carrying costs (taxes, insurance, 23 mo)</td><td>($35,000)</td><td></td></tr>
+          <tr><td>Less: desired margin (20%)</td><td>($257,100)</td><td></td></tr>
+          <tr><td>Recovery-based maximum bid</td><td>$1,027,900</td><td></td></tr>
+          <tr><td><strong>Your maximum bid (lower of the two)</strong></td><td><strong>$1,027,900</strong></td><td></td></tr>
+        </table>
+        <br>
+        <p>The bank's asking price of $1,032,500 is essentially at the recovery-based ceiling — which confirms this is a fairly priced deal with little room to negotiate. <span class="highlight">If the LTV ceiling is the binding constraint, that's your number — regardless of recovery analysis.</span> Never let upside projections override the 65% rule.</p>
+      </div>
+
+      <div class="card">
+        <h3>☢️ Part 4 — Catastrophic Risk Screen</h3>
+        <p>Before any offer, screen for these deal-killers. Any confirmed catastrophic risk is a hard pass.</p>
+        <br>
+        <table>
+          <tr><th>Risk</th><th>Severity</th><th>Screen</th></tr>
+          <tr><td><strong>Environmental contamination (CERCLA)</strong></td><td style="color:var(--red);font-weight:700">Catastrophic</td><td>Phase I ESA for any commercial/industrial property. If Phase I shows RECs, require Phase II before closing. CERCLA successor liability can exceed the property value — a contaminated site can cost millions to remediate.</td></tr>
+          <tr><td><strong>Title chain failure</strong></td><td style="color:var(--red);font-weight:700">Catastrophic</td><td>Full title search + lender's title insurance confirmed in your name as assignee. Missing assignments in the chain can prevent foreclosure entirely.</td></tr>
+          <tr><td><strong>Chapter 11 bankruptcy</strong></td><td style="color:var(--amber);font-weight:700">Manageable</td><td>Check PACER before and after closing. Watch for borrower distress signals (missed taxes, UCC filings, vendor liens) — file foreclosure before they file.</td></tr>
+          <tr><td><strong>HOA super-liens</strong></td><td style="color:var(--amber);font-weight:700">Manageable</td><td>FL HOA liens up to 12 months of assessments are senior to your mortgage. Confirm HOA status and delinquency amount. Budget it in.</td></tr>
+          <tr><td><strong>Tax certificates</strong></td><td style="color:var(--amber);font-weight:700">Manageable</td><td>Delinquent property taxes accrue at up to 18% and can lead to tax deed sale wiping your lien. Pay delinquent taxes and add to your balance.</td></tr>
+          <tr><td><strong>Mold / asbestos</strong></td><td style="color:var(--amber);font-weight:700">Manageable</td><td>Inspect before taking title. Remediation cost must be modeled into your exit.</td></tr>
+        </table>
+      </div>
+
+      <div class="alert alert-amber">
+        <strong>Accrued Interest at Purchase:</strong> Banks sell at UPB + contract rate to date. Your bid should be benchmarked against the <em>face UPB</em> first, then verify the bank's accrued balance calculation. The spread between the bank's price and your 25% accrual position is your immediate gain — confirm this calculation before committing to a price.
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(4)">← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(6)">Next: Buy the Note →</button>
+      </div>
+    </div>
+
+    <!-- STEP 7: PSA -->
+    <div class="section" id="section-6">
+      <div class="section-header">
+        <div class="step-badge">7</div>
+        <div>
+          <h2>Buy the Note — The PSA</h2>
+          <div class="sub">The purchase and sale agreement, closing mechanics, and what you receive</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📄 The Purchase and Sale Agreement (PSA)</h3>
+        <p>The PSA is the contract between you (buyer) and the bank (seller). For your first deal, the bank will likely send you their standard PSA. Key provisions to review with your attorney:</p>
+        <br>
+        <table>
+          <tr><th>Clause</th><th>What to Watch For</th></tr>
+          <tr><td><strong>Purchase Price</strong></td><td>Stated as a dollar amount or percentage of UPB; clarify which balance (original principal vs. total payoff)</td></tr>
+          <tr><td><strong>Representations &amp; Warranties</strong></td><td>Sold "as-is, where-is" is standard; try to get the bank to rep that the note is the complete and unmodified original</td></tr>
+          <tr><td><strong>Due Diligence Period</strong></td><td>Negotiate 15–30 days minimum to complete title search, appraisal, and legal review</td></tr>
+          <tr><td><strong>Closing Timeline</strong></td><td>Typically 10–30 days after DD period expires; wire transfer at closing</td></tr>
+          <tr><td><strong>Assignment Language</strong></td><td>Must specifically assign the note, mortgage, and all ancillary documents (guarantees, assignment of rents, etc.)</td></tr>
+          <tr><td><strong>Re-trading Rights</strong></td><td>Banks hate re-trading. Lock in your price early and don't ask for a price reduction after DD unless you find a material defect in title</td></tr>
+          <tr><td><strong>Confidentiality</strong></td><td>Most banks require you not to disclose the sale price or the existence of the sale to third parties (including the borrower) until closing</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>📦 What You Receive at Closing</h3>
+        <ul class="checklist">
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Original promissory note with allonge (endorsement) assigning it to your LLC</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Assignment of Mortgage — recorded in the county where the property is located</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Assignment of any personal guarantee</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Assignment of Assignment of Rents (if any)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Loan file: original underwriting, title policy, appraisals, payment history</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Servicer transfer notice (if applicable)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>RESPA transfer of servicing notice (required even for commercial, some banks do it)</span></li>
+        </ul>
+      </div>
+
+      <div class="alert alert-red">
+        <strong>Original Note is Critical.</strong> In Florida, you must hold the original wet-ink promissory note to foreclose. If the bank cannot produce the original, you have a serious problem. Confirm the bank has possession of the original note BEFORE you sign the PSA. Your attorney must take physical custody of the original at closing.
+      </div>
+
+      <div class="card">
+        <h3>🏦 Recording the Assignment</h3>
+        <p>Your attorney must record the <strong>Assignment of Mortgage</strong> in the official records of the county where the property is located. This is a public filing that establishes you as the current mortgagee of record. Do this immediately at closing — do not wait. Recording fees are ~$10 per page.</p>
+        <br>
+        <p>Until the assignment is recorded, the chain of title shows the original lender still holds the mortgage. This creates risk in litigation and can cause title issues later.</p>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(5)">← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(7)">Next: Post-Acquisition →</button>
+      </div>
+    </div>
+
+    <!-- STEP 8: POST-ACQUISITION -->
+    <div class="section" id="section-7">
+      <div class="section-header">
+        <div class="step-badge">8</div>
+        <div>
+          <h2>Post-Acquisition</h2>
+          <div class="sub">The first 30 days after you own the note — and then doing nothing (strategically)</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>✅ Immediate Actions (Days 1–30)</h3>
+        <ul class="checklist">
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Confirm original note and all assignment documents are in your attorney's possession</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Confirm Assignment of Mortgage has been recorded in the county records</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Send borrower a <strong>Notice of Assignment</strong> — required by law; directs future payments to you</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Set up a loan ledger — track principal, accrued default interest (25% p.a.), and fees daily</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Confirm property tax status — ensure taxes aren't delinquent enough to threaten your lien</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Confirm property insurance is in force (you're named additional insured on the policy)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Do a drive-by or confirm property occupancy status</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Check PACER for any new bankruptcy filings by the borrower entity</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>📊 The Loan Ledger — Your Most Important Spreadsheet</h3>
+        <p>Track this from Day 1. Update monthly.</p>
+        <br>
+        <table>
+          <tr><th>Field</th><th>Notes</th></tr>
+          <tr><td>Purchase Date</td><td>Date you closed on the note</td></tr>
+          <tr><td>Purchase Price</td><td>What you paid</td></tr>
+          <tr><td>Face Balance at Purchase</td><td>UPB + accrued interest as of closing date</td></tr>
+          <tr><td>Default Date</td><td>When borrower first defaulted (from payment history)</td></tr>
+          <tr><td>Default Rate</td><td>25% per annum (confirm from note)</td></tr>
+          <tr><td>Monthly Accrual</td><td>Face Balance × 25% ÷ 12</td></tr>
+          <tr><td>Current Payoff Balance</td><td>Updated monthly — what borrower owes today</td></tr>
+          <tr><td>Property Value (Est.)</td><td>From appraisal; update annually</td></tr>
+          <tr><td>Loan-to-Value (Current)</td><td>Payoff ÷ Property Value — your trigger metric</td></tr>
+          <tr><td>Carry Costs YTD</td><td>Taxes paid, legal fees, insurance advances</td></tr>
+        </table>
+      </div>
+
+      <div class="alert alert-blue">
+        <strong>The Stall Period:</strong> After Day 30, your job is largely to <em>wait and accrue</em>. You are not required to contact the borrower, demand payment, or initiate foreclosure. The 25% default interest accrues every day. Check the property and taxes quarterly. Check PACER monthly for bankruptcy. Otherwise, let the clock run.
+      </div>
+
+      <div class="card">
+        <h3>⚠️ Events That Force Your Hand</h3>
+        <p>Certain events require you to act rather than stall:</p>
+        <ul>
+          <li><strong>Borrower files Chapter 11 bankruptcy</strong> — automatic stay halts all collection/foreclosure. Your attorney must file a Motion for Relief from Stay (arguing no equity and lack of adequate protection). This can add 3–9 months of delay but does not destroy the strategy.</li>
+          <li><strong>Tax certificate sale threatening your lien</strong> — if property taxes go unpaid, the county will sell a tax certificate which can eventually lead to a tax deed sale that wipes your mortgage. Pay the taxes and add to your balance (not always required, but protecting the lien is critical).</li>
+          <li><strong>Property becomes vacant/vandalized</strong> — document, consider an assignment of rents motion or receiver appointment to protect the asset.</li>
+          <li><strong>A second lienholder files foreclosure</strong> — you may need to intervene or start your own proceeding to protect first position.</li>
+        </ul>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(6)">← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(8)">Next: Workout &amp; Guarantee →</button>
+      </div>
+    </div>
+
+    <!-- STEP 9: WORKOUT -->
+    <div class="section" id="section-8">
+      <div class="section-header">
+        <div class="step-badge">9</div>
+        <div>
+          <h2>Workout &amp; Guarantee Release</h2>
+          <div class="sub">The restructuring conversation — what to offer, what to get, and how to document it</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🎯 Your Goal in the Workout</h3>
+        <p>You are not required to contact the borrower. The 25% default interest accrues whether you talk to them or not. You initiate a workout conversation when the accrued balance is approaching the property value and a negotiated resolution would save you the time and cost of foreclosure — or when the borrower reaches out first and you want to control the terms of the conversation.</p>
+        <br>
+        <p>Your possible outcomes, in order of preference:</p>
+        <ol>
+          <li><strong>Full cash payoff</strong> — borrower refinances and pays the entire accrued balance. Best outcome.</li>
+          <li><strong>Deed-in-lieu</strong> — borrower conveys the property, you get clean title in days instead of 8–14 months of litigation.</li>
+          <li><strong>Forbearance with deadline</strong> — you agree not to foreclose for a fixed period while the borrower markets the property or arranges refinancing. If they succeed, you get paid in full. If the deadline passes, you foreclose.</li>
+          <li><strong>Foreclose</strong> — no workout reached. You proceed to judgment on your timeline.</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h3>🔑 The Guarantee Release — What It Is and Isn't</h3>
+        <p>The personal guarantee is your recourse against the individual guarantor if the property sale doesn't cover the full accrued debt. Its practical value depends on one question: does the guarantor have personal assets worth pursuing? If yes, it's a real asset. If no, it's a worthless claim you can release for free.</p>
+        <br>
+        <p>Think of the workout as a menu of trades — not a package deal:</p>
+        <br>
+        <table>
+          <tr><th>Transaction</th><th>You Give</th><th>You Get</th></tr>
+          <tr><td><strong>Deed-in-Lieu</strong></td><td>Release guarantee + satisfy mortgage</td><td>Property now, no litigation — saves 8–14 months and $15–25K in legal fees</td></tr>
+          <tr><td><strong>Forbearance + DIL deadline</strong></td><td>60–90 days of patience</td><td>Signed DIL agreement in hand today; deed transfers automatically if deadline passes</td></tr>
+          <tr><td><strong>Forbearance + partial payment</strong></td><td>X months of no foreclosure</td><td>Cash now, reducing your effective cost basis</td></tr>
+          <tr><td><strong>Foreclose (no workout)</strong></td><td>Nothing</td><td>Full accrued judgment after 8–14 months</td></tr>
+        </table>
+        <br>
+        <div class="alert alert-red">
+          <strong>What you never do:</strong> Grant forbearance in exchange for the guarantee release alone — or in exchange for a promise to cooperate or discuss restructuring. That gives away both time and recourse with nothing tangible in return. The guarantee release only makes sense as consideration for the deed itself (DIL row). It has no place in a forbearance-only transaction.
+        </div>
+        <br>
+        <p>You also never volunteer that you would release the guarantee. Let the borrower ask for it. Their request tells you whether the guarantor has personal assets worth your attention — and that changes how aggressively you pursue foreclosure vs. settlement.</p>
+      </div>
+
+      <div class="card">
+        <h3>📝 How to Document the Conversation</h3>
+        <p>This must be handled with great care. Your attorney should draft all outreach. The key documents:</p>
+        <ul>
+          <li><strong>Letter of Inquiry</strong> — a formal letter from your LLC stating that you are willing to discuss workout options and inviting the borrower to contact you. No promises, no commitments.</li>
+          <li><strong>Forbearance Agreement</strong> — if you agree to delay foreclosure in exchange for something (guarantee release, partial payment, deed-in-lieu), this must be in a signed, written agreement before you provide any benefit.</li>
+          <li><strong>Guarantee Release</strong> — a separate executed document in which the guarantor releases all claims arising from the guarantee in exchange for stated consideration (time extension, forbearance, etc.).</li>
+        </ul>
+        <br>
+        <p><strong>Never, ever make verbal promises about workout terms.</strong> If you tell a borrower "I'll give you 6 more months if you release the guarantee" verbally and then foreclose in 3 months, you face lender liability exposure. Everything in writing, everything through your attorney, every commitment explicitly conditioned.</p>
+      </div>
+
+      <div class="card">
+        <h3>🏠 Deed-in-Lieu of Foreclosure — The 5-Step Sequence</h3>
+        <p>A deed-in-lieu saves 8–14 months of litigation and legal fees. The borrower voluntarily conveys title to you in exchange for loan satisfaction. But it must be executed precisely or it creates new problems.</p>
+        <br>
+        <div class="alert alert-red" style="margin-bottom:14px">
+          <strong>Critical:</strong> A deed-in-lieu does NOT extinguish junior liens, second mortgages, mechanic's liens, or HOA liens — unlike a completed foreclosure, which wipes all junior interests. Only accept a deed-in-lieu on properties with a clean junior lien search. If there are junior liens, foreclose instead.
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Step 1</div>
+            <h4>Sign the DIL Agreement</h4>
+            <p>Your attorney drafts a deed-in-lieu agreement specifying: the deed to be conveyed, the consideration (satisfaction of the note and mortgage), the guarantee release (if applicable), and representations from borrower that no new liens have been placed.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Step 2</div>
+            <h4>Due Diligence Window</h4>
+            <p>Run a full title search, updated appraisal, and environmental review. This is a new taking of title — treat it like a property acquisition. You are looking especially for junior liens and tax certificates placed since your original title search.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Step 3</div>
+            <h4>Borrower Delivers Estoppel Certificate</h4>
+            <p>The borrower (and guarantor, if applicable) signs an estoppel certificate confirming: the balance owed, that no defenses or counterclaims exist, that they are not in bankruptcy, and that no liens have been placed since the agreement date. This document closes the door on future lender liability claims.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Step 4</div>
+            <h4>Simultaneous Closing</h4>
+            <p>The deed transfer and the guarantee release must close simultaneously, in the same transaction. Do not record the deed before you have the signed guarantee release in hand. Do not release the guarantee before the deed is recorded. Both happen at the same closing table.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Step 5</div>
+            <h4>Record Deed + Satisfy Mortgage</h4>
+            <p>Record the deed in the county official records. Simultaneously record a Satisfaction of Mortgage (you are both mortgagee and new property owner — the mortgage merges into title). File documentary stamp taxes on the deed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>✅ Favorable Outcomes from Workout</h3>
+          <ul>
+            <li>Borrower pays off the full accrued balance in cash (best outcome)</li>
+            <li>Clean deed-in-lieu on a lien-free property — saves 8–14 months of litigation</li>
+            <li>Borrower provides current financial statements revealing hidden assets for deficiency collection</li>
+            <li>Borrower delivers deed-in-lieu with simultaneous guarantee release — saves 8–14 months of litigation at the cost of a deficiency claim that likely had limited practical value</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>🚫 Unfavorable Outcomes</h3>
+          <ul>
+            <li>Borrower hires aggressive attorney and demands loan modification on favorable terms</li>
+            <li>Borrower files Chapter 11 immediately after being contacted</li>
+            <li>Borrower records a lis pendens or files a lawsuit asserting lender liability</li>
+            <li>Workout drags on without resolution, burning your time and legal budget</li>
+          </ul>
+          <p style="margin-top:8px; font-size:13px; color:var(--gray-600)">In these cases: stop the workout discussion and proceed to foreclosure.</p>
+        </div>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(7)">← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(9)">Next: Foreclosure →</button>
+      </div>
+    </div>
+
+    <!-- STEP 10: FORECLOSURE -->
+    <div class="section" id="section-9">
+      <div class="section-header">
+        <div class="step-badge">10</div>
+        <div>
+          <h2>Foreclosure in Florida</h2>
+          <div class="sub">The judicial process — what happens, how long it takes, and what you win</div>
+        </div>
+      </div>
+
+      <div class="alert alert-blue">
+        <strong>Florida is a judicial foreclosure state.</strong> Foreclosure requires a lawsuit filed in circuit court. Average timeline for uncontested commercial cases: <strong>8–14 months</strong> from filing to sale. Contested cases can take 18–36 months.
+      </div>
+
+      <div class="card">
+        <h3>⏱️ When to File — IRR Optimization</h3>
+        <p>The accrual clock runs every day before filing. The right time to file is when your projected balance <em>at judgment</em> (not at filing) approaches the property value. Work backwards:</p>
+        <br>
+        <p style="font-size:13px; background:var(--gray-50); border:1px solid var(--gray-200); border-radius:6px; padding:12px; font-family:monospace">
+          Optimal filing month = [12 × ln(FV ÷ UPB) ÷ ln(1.25)] − F
+          <br><br>
+          Where FV = conservative property value, UPB = face balance, F = expected foreclosure duration in months
+        </p>
+        <br>
+        <p><strong>Example:</strong> UPB $1M, property $1.4M conservatively, F = 15 months → file at month 3. By judgment at month 18, balance = ~$1.4M = collateral ceiling.</p>
+        <br>
+        <p>File <strong>earlier</strong> than the formula if you observe any of these acceleration triggers:</p>
+        <ul>
+          <li><strong>Borrower distress signals</strong> (missed property taxes, UCC filings, vendor liens) — file before they file Chapter 11</li>
+          <li><strong>Junior lien activity</strong> — if a junior lienholder threatens foreclosure, you must move first</li>
+          <li><strong>Property deterioration</strong> — update your BPO annually; if value is declining, the formula shifts earlier</li>
+          <li><strong>Statute of limitations approaching</strong> — FL has a 5-year SOL on mortgage foreclosure (Fla. Stat. 95.11(2)(c)). Never let this become a factor.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>⚖️ The Foreclosure Timeline</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Day 1</div>
+            <h4>File Complaint &amp; Lis Pendens</h4>
+            <p>Your attorney files the foreclosure complaint in the Circuit Court of the county where the property is located. A lis pendens is simultaneously recorded, giving public notice. Filing fees ~$400–1,900 depending on claim amount.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Days 30–60</div>
+            <h4>Service of Process</h4>
+            <p>The borrower entity is served. Service on a Florida entity is via the registered agent. Default period: 20 days to respond after service.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Months 2–6</div>
+            <h4>Litigation / Default Judgment</h4>
+            <p>If uncontested: motion for summary judgment or default judgment. If contested: discovery, motions, hearings. Uncontested commercial cases often get summary judgment in 60–120 days after service.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Month 6–10</div>
+            <h4>Final Judgment of Foreclosure</h4>
+            <p>Court enters a Final Judgment stating the total amount owed (principal + default interest + fees + advances) and sets a foreclosure sale date, typically 20–35 days out.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Sale Day</div>
+            <h4>Clerk's Foreclosure Sale</h4>
+            <p>Public auction at the courthouse (or online via Realauction.com in most FL counties). You submit a <strong>credit bid</strong> up to the amount of the Final Judgment. If no third party bids above your credit bid, you take title. If a third party outbids, you receive cash up to the judgment amount.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">10 Days After Sale</div>
+            <h4>Certificate of Title Issued</h4>
+            <p>The clerk issues a Certificate of Title, which is your deed to the property. There is <strong>no post-sale redemption period in Florida</strong> — title is clean from this point.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>💰 The Credit Bid Strategy</h3>
+          <p>At the foreclosure sale, you bid the amount of the Final Judgment (your full accrued debt). If no one outbids you, you take the property. If someone does outbid you:</p>
+          <ul>
+            <li>You get paid cash up to the judgment amount</li>
+            <li>Any surplus above goes to junior lienholders, then borrower</li>
+            <li>You may also pursue a <strong>deficiency judgment</strong> for any remaining balance within 1 year of the sale</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>🏢 If You Take the Property</h3>
+          <p>You now own commercial real estate. Your cost basis is your purchase price for the note, not the accrued judgment amount. Options:</p>
+          <ul>
+            <li>Sell immediately (contact brokers before the sale)</li>
+            <li>Lease and hold as income property</li>
+            <li>Redevelop if underutilized</li>
+          </ul>
+          <p style="margin-top:8px; font-size:13px; color:var(--gray-600)">Budget 60–90 days to clean title and prepare for sale after the Certificate of Title.</p>
+        </div>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(8)">← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(10)">Next: Exit &amp; Returns →</button>
+      </div>
+    </div>
+
+    <!-- STEP 11: EXITS -->
+    <div class="section" id="section-10">
+      <div class="section-header">
+        <div class="step-badge">11</div>
+        <div>
+          <h2>Exit &amp; Returns</h2>
+          <div class="sub">How the money comes back, what returns look like, and how to scale</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📈 Return Model — Scenarios</h3>
+        <p>Consistent example throughout: <strong>$1M UPB, 6.5% contract rate, 6 months in default at close. Purchase price: $1,032,500. Property value: $1,600,000 (64.5% LTV ✓).</strong> 25% default interest accruing from the original default date. Foreclosure process assumed 14 months once filed.</p>
+        <br>
+        <table>
+          <tr><th>Scenario</th><th>Event</th><th>Months Held</th><th>Your Proceeds</th><th>Net Profit</th><th>IRR (est.)</th></tr>
+          <tr style="background:#dcfce7"><td><strong>⭐ Optimal</strong></td><td>Borrower pays off at month 12 — balance $1,375,000 (18 months total default)</td><td>12</td><td>$1,375,000</td><td>$342,500</td><td>~33%</td></tr>
+          <tr><td><strong>Immediate payoff</strong></td><td>Borrower pays off at close — balance $1,125,000 (6 months default)</td><td>~0</td><td>$1,125,000</td><td>$92,500</td><td>8.9% return on capital (day 1)</td></tr>
+          <tr><td><strong>18-month payoff</strong></td><td>Borrower pays off at month 18 — balance $1,500,000 (24 months total default)</td><td>18</td><td>$1,500,000</td><td>$467,500</td><td>~28%</td></tr>
+          <tr><td><strong>Third party overbid</strong></td><td>File month 9, judgment month 23, third party bids to $1,600,000</td><td>23</td><td>$1,600,000</td><td>$567,500</td><td>~26%</td></tr>
+          <tr><td><strong>Credit bid + sell</strong></td><td>File month 9, take property month 23, sell for $1.45M net</td><td>23+</td><td>$1,450,000</td><td>$417,500</td><td>~19%</td></tr>
+          <tr><td><strong>Stress</strong></td><td>Property declines 20% to $1.28M; sell for $1.28M net after foreclosure</td><td>23+</td><td>$1,280,000</td><td>$247,500</td><td>~11%</td></tr>
+          <tr><td><strong>Loss</strong></td><td>Property declines 35% + contested foreclosure adds $50K costs</td><td>30+</td><td>$985,000</td><td>($47,500)</td><td>Negative</td></tr>
+        </table>
+        <br>
+        <p>The loss scenario requires both a 35% property decline and a contested foreclosure. The 65% LTV ceiling is what prevents this from being a common outcome — at 65% LTV, the property must decline 35% before you lose a dollar.</p>
+      </div>
+
+      <div class="card">
+        <h3>⭐ The Optimal Outcome — Why Month 12 Wins</h3>
+        <p>The 12-month voluntary payoff produces the highest IRR of any scenario, even though it generates less total profit than the 18-month payoff or foreclosure overbid. Here's why:</p>
+        <br>
+        <table>
+          <tr><th>Scenario</th><th>Total Profit</th><th>Hold Period</th><th>IRR</th><th>What You Avoid</th></tr>
+          <tr><td>Immediate payoff</td><td>$92,500</td><td>~0</td><td>8.9% on capital</td><td>Everything — but accrual hasn't run</td></tr>
+          <tr style="background:#dcfce7"><td><strong>⭐ 12-month payoff</strong></td><td><strong>$342,500</strong></td><td><strong>12 months</strong></td><td><strong>~33%</strong></td><td><strong>Foreclosure cost, REO risk, property ownership</strong></td></tr>
+          <tr><td>18-month payoff</td><td>$467,500</td><td>18 months</td><td>~28%</td><td>Foreclosure cost, REO risk</td></tr>
+          <tr><td>Foreclosure + overbid</td><td>$567,500</td><td>23 months</td><td>~26%</td><td>REO risk only</td></tr>
+          <tr><td>Foreclosure + own property</td><td>$417,500</td><td>23+ months</td><td>~19%</td><td>Nothing — takes the most time and risk</td></tr>
+        </table>
+        <br>
+        <p>IRR peaks at the 12-month payoff for three reasons:</p>
+        <ul>
+          <li><strong>Accrual has run long enough</strong> — 18 months of total default at 25% has generated a $342,500 spread on a $1,032,500 investment. That's a 33% return in 12 months.</li>
+          <li><strong>You get cash, not property</strong> — No foreclosure costs ($15–25K), no REO management, no title cleaning, no environmental risk, no time spent managing an asset. Cash is immediately recyclable into the next deal.</li>
+          <li><strong>Beyond 12 months, the IRR declines</strong> — More accrual increases total dollars but the additional holding time causes IRR to fall. The 18-month payoff generates $125,000 more profit but over 6 additional months — a 28% IRR versus 33%. Foreclosure generates the most total dollars but the worst IRR of any positive scenario.</li>
+        </ul>
+        <br>
+        <div class="alert alert-green">
+          <strong>The practical implication:</strong> When your workout conversation begins, a borrower who can pay off at month 12 is your best counterparty — better than a third-party bidder at the foreclosure sale, and far better than taking the property yourself. Structure the workout conversation to identify whether the borrower has a path to refinance within 12–18 months. If they do, give them the time and collect the cash. If they don't, foreclose on your optimal timeline.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>♻️ Recycling Capital — How You Scale</h3>
+        <p>The strategy compounds if you recycle proceeds:</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Year 1</div>
+            <h4>Close Note #1</h4>
+            <p>Borrow against equities. One deal running.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Year 1–2</div>
+            <h4>Add Notes #2 and #3</h4>
+            <p>As you develop relationships and process, add 1–2 more notes while #1 accrues. Total deployed: $1.5–2M.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Year 2–3</div>
+            <h4>First Exits Occur</h4>
+            <p>Notes from Year 1 pay off or foreclose. Cash returns to fund new notes. Pay down borrow line, repeat at larger scale.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Year 3–4</div>
+            <h4>Consider Outside Capital</h4>
+            <p>With 3–5 completed deals and a track record, you can raise LP capital at a preferred return, keeping 20–30% carry. This decouples you from the equity margin constraint.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-green">
+        <strong>Key Metric to Track:</strong> Cash-on-Cash return per deal. Your purchase price is UPB + contract rate accrual. Your accruing balance grows at 25%. The spread between those two rates — typically 18–19 points — compounds in your favor every month you hold. The wider the gap between the contract rate and 25%, and the longer the default has been running at close, the larger your Day 1 position.
+      </div>
+
+      <div class="card">
+        <h3>🧾 Tax Treatment</h3>
+        <p>Buying at UPB + contract rate means you have no "market discount" under IRC §§1276–1278 — you paid at or above the original face balance. Your profit profile is cleaner than a discount buyer's, but most of it is still ordinary income.</p>
+        <br>
+        <table>
+          <tr><th>Situation</th><th>Tax Character</th><th>Notes</th></tr>
+          <tr><td><strong>Interest spread collected</strong> (25% accrual minus your cost basis)</td><td style="color:var(--red);font-weight:700">Ordinary income</td><td>The 25% default interest you accrued above your purchase price is interest income. Taxed at ordinary rates up to 37%.</td></tr>
+          <tr><td><strong>Property appreciation above note basis</strong> (if you foreclose and sell)</td><td style="color:var(--green);font-weight:700">Capital gain</td><td>Appreciation above your original purchase price for the note qualifies as capital gain if held over 12 months.</td></tr>
+        </table>
+        <br>
+        <p><strong>Planning levers:</strong></p>
+        <ul>
+          <li><strong>1031 Exchange</strong> — If you foreclose and take the property, you can exchange it into another investment property to defer the capital gain portion. The ordinary income piece (market discount) does not qualify. Works best when you intend to hold real estate.</li>
+          <li><strong>Installment Sale</strong> — If a borrower pays you off over time rather than in a lump sum, you can spread ordinary income recognition over the payment period. Requires careful structuring under IRC §453.</li>
+          <li><strong>Investor vs. Dealer Status</strong> — If you buy and sell notes frequently, the IRS may characterize you as a dealer, converting even your property gain into ordinary income. Keep your entity structure and deal frequency consistent with investor (not dealer) behavior.</li>
+        </ul>
+        <br>
+        <div class="alert alert-amber" style="margin-top:0">
+          <strong>Action:</strong> Engage a CPA who specializes in distressed debt or real estate before your first exit. The market discount rules are non-intuitive and the structuring decisions must be made before the transaction closes — not after.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🏦 Raising Outside Capital</h3>
+        <p>Once you have 2–3 completed deals and a track record, you can bring in outside investors. The standard structure:</p>
+        <ul>
+          <li><strong>Deal-by-Deal SPV</strong> — a separate LLC for each note, with outside investors as members. Simpler than a fund; no ongoing management obligation between deals.</li>
+          <li><strong>Reg D 506(b)</strong> — allows up to 35 sophisticated (non-accredited) investors plus unlimited accredited investors. No advertising permitted. Best for known contacts.</li>
+          <li><strong>Economics</strong> — Preferred return of 8–10% to investors, then 70–80% to investors / 20–30% carry (profit share) to you as manager. The carry is your compensation for origination, management, and workout.</li>
+          <li><strong>Required docs</strong> — Private Placement Memorandum (PPM), Subscription Agreement, Operating Agreement, Form D filing with SEC within 15 days of first sale.</li>
+        </ul>
+        <br>
+        <p>At your stage, do 3–5 solo deals first. A track record of completed deals with documented IRRs is worth more than any PPM when approaching investors.</p>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(9)">← Previous</button>
+        <button class="btn btn-primary" onclick="showSection(11)">Next: First Deal Checklist →</button>
+      </div>
+    </div>
+
+    <!-- STEP 12: CHECKLIST -->
+    <div class="section" id="section-11">
+      <div class="section-header">
+        <div class="step-badge">✓</div>
+        <div>
+          <h2>First Deal Checklist</h2>
+          <div class="sub">Everything you need to complete before closing your first note</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📋 Pre-Deal Setup (Do Once)</h3>
+        <ul class="checklist">
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Pledged Asset Line established with brokerage — sized at ≤50% LTV on pledged equities</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Management LLC formed in Florida</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Florida foreclosure attorney retained and briefed on strategy</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Title company identified that handles note/mortgage assignments</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Appraiser identified (can quote BPOs quickly)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>PACER account created (pacer.gov — free for basic access)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Target bank outreach begun (working the list of 45 FL community banks)</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>📋 Per-Deal Steps</h3>
+        <ul class="checklist">
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Deal LLC formed for this note</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Bank sends loan summary package — reviewed</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Borrower is confirmed legal entity (not individual)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Original principal confirmed >$500K</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Default rate in note confirmed (25% or close)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Original note confirmed in bank's possession</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>BPO or appraisal ordered and received</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span><strong>65% LTV ceiling confirmed</strong> — purchase price ≤ 65% of appraised property value</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Title search completed — first lien position confirmed, chain of assignment clean</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Junior lien search completed — no mechanic's liens, HOA super-liens, or junior mortgages</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Phase I Environmental Site Assessment reviewed (commercial/industrial properties — mandatory)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>PACER check — no active bankruptcy by borrower entity or guarantor</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Bid calculation completed — 65% LTV ceiling and recovery-based ceiling both calculated; lower governs</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Bank's accrued balance verified — confirm their math on UPB + contract rate</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Immediate spread calculated — difference between bank's price and your 25% accrual position at closing</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Optimal filing date calculated — back-solved from property value and expected foreclosure duration</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>CPA briefed on deal — market discount treatment, 1031 potential, installment sale option</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>PSA reviewed by attorney and signed</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Wire sent from deal LLC account</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Original note received by attorney</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Assignment of Mortgage recorded in county</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Borrower Notice of Assignment sent</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Loan ledger started — accrual tracking live</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Property taxes confirmed current (or delinquent amount budgeted and modeled)</span></li>
+          <li><div class="check-box" onclick="toggleCheck(this)"></div><span>Property insurance confirmed — LLC named additional insured</span></li>
+        </ul>
+      </div>
+
+      <div class="alert alert-green">
+        <strong>You're ready to start.</strong> Work the bank list. Set up the PAL first — having capital available lets you move when a deal appears. Your first deal teaches you more than any guide can.
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="showSection(10)">← Previous</button>
+        <button class="btn btn-primary" disabled>✓ Complete</button>
+      </div>
+    </div>
+
+  </div><!-- /main -->
+</div><!-- /layout -->
+
+<script>
+  let current = 0;
+  const total = 12;
+
+  function showSection(n) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
+    document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+    document.getElementById('section-' + n).classList.add('visible');
+    document.querySelectorAll('.nav-item')[n].classList.add('active');
+    current = n;
+    const pct = Math.round(((n + 1) / total) * 100);
+    document.getElementById('progress').style.width = pct + '%';
+    document.getElementById('progress-label').textContent = 'Step ' + (n + 1) + ' of ' + total;
+    window.scrollTo(0, 0);
+  }
+
+  function toggleCheck(el) {
+    el.classList.toggle('checked');
+    const li = el.parentElement;
+    li.classList.toggle('done');
+  }
+</script>
+</body>
+</html>
